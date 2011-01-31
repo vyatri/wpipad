@@ -21,9 +21,6 @@
 					<a href="<?php bloginfo('url');?>"><span class="abs"></span>Home</a>
 				</li>
 				<?php wp_list_categories('title_li=');?>
-				<li>
-				    <a href="<?php bloginfo('url');?>/kontribusi/">Contribute!</a>
-				</li>
 			</ul>
 		</div>
 	</div>
