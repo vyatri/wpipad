@@ -1,0 +1,18 @@
+WPiPAD 1.0
+
+installation instructions:
+1. put wpipad.php in wp-content/plugins/ directory
+2. put 'slable' folder in wp-content/themes directory
+3. activate the plugin
+
+if you want to use your own iPad-friendly theme, simply edit wpipad.php on this line:
+
+define("WPIPAD_THEME","slablet");
+
+and change the word "slablet" to your favorite theme's folder name. Do not remove the quotation marks.
+
+Guide on creating theme:
+-if you want to make "view full site" link, simply link it to [your web url]/wpipadoff
+-to view "view iPad site", simply link to [your web url]/wpipadon
+
+however, the default view on iPad is iPad view.
