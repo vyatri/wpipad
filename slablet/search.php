@@ -10,15 +10,13 @@
 					</tr>
 				</thead>
 				<tbody>
-				<?php $recentposts = get_posts('numberposts=-1');
-                    foreach ($recentposts as $post) :
-                        setup_postdata($post); ?>
+				<?php if (have_posts()) : while (have_posts()) : the_post();?>
 					<tr>
 						<td>
 							<a href="<?php the_permalink();?>"><?php the_title(); ?></a>
 						</td>
 					</tr>
-				<?php endforeach; ?>
+				<?php endwhile; endif; ?>
 				</tbody>
 			</table>
 			
