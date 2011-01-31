@@ -13,15 +13,16 @@
 					</tr>
 				</thead>
 				<tbody>
-				<?php $recentposts = get_posts('numberposts=-1');
-                    foreach ($recentposts as $post) :
-                        setup_postdata($post); ?>
+				<?php
+				 $q = 'posts_per_page=-1&category_name='.$wp_query->query_vars['category_name'];
+				 query_posts($q);
+				if (have_posts()) : while (have_posts()) : the_post();?>
 					<tr>
 						<td>
 							<a href="<?php the_permalink();?>"><?php the_title(); ?></a>
 						</td>
 					</tr>
-				<?php endforeach; ?>
+				<?php endwhile; endif; ?>
 				</tbody>
 			</table>
 			
