@@ -27,6 +27,7 @@
     session_start();
     //define("WPIPAD_THEME","sepia");
     define("WPIPAD_THEME","slablet");
+	define("tesgit","iya");
 
     function wpipad_template($theme) {
         if (wpipad_installed()) {
